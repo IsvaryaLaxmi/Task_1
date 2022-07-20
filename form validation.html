@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+</head>
+<script>
+  function sub1(){
+  document.getElementById('a1').value=
+  document.getElementById('a').value;
+  document.getElementById('b1').value=
+  document.getElementById('b').value;
+  document.getElementById('c1').value=
+  document.getElementById('c').value;
+
+//   var x=document.getElementById('a');
+//   if(
+//       x.style.display === "block"){
+//           x.style.display ="none";
+//         }
+        // else{
+        //     x.style.display ="none";
+        // }
+        let btnclear=document.querySelector('#clear');
+    let inputs=document.querySelectorAll('#a,#b,#c');
+
+    btnclear.addEventListener('click',() =>{
+        inputs.forEach(input => input.value = '')
+    });
+} 
+</script>
+<body>
+  <div style="text-align: center;background-color: antiquewhite;position: absolute;width: 300px;border:3px solid #000000;padding:0px 0px 10px 0px;">
+ <h1 >Form Validation</h1>
+<div style="background-color: cadetblue;display: inline-block; padding:20px;">
+  First name:
+  <input type="text" placeholder="Type something..." id="a"><br><br>
+  Last name:
+  <input type="text" placeholder="Type something..." id="b"><br><br>
+  E-mail ID:
+  <input type="text" placeholder="Type something..." id="c"><br><br>
+  <button onclick="sub1()" >SUBMIT</button>
+    <!-- <input type="submit" value="SUBMIT" onclick="sub1()"> -->
+    <button id="clear">Clear</button><br><br>
+ First name:
+  <input type="text" id="a1"><br><br>
+  Last name:
+  <input type="text"  id="b1"><br><br>
+  E-mail ID:
+  <input type="text"  id="c1"><br><br>
+</div>
+</div>
+</form>  
+</body>
+</html>
+
